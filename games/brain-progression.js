@@ -12,7 +12,7 @@ const fill = () => {
   return result;
 };
 
-const questionsInit = () => {
+export default () => {
   const result = [];
   for (let i = 0; i < index.count; i += 1) {
     const temp = [];
@@ -26,5 +26,3 @@ const questionsInit = () => {
   }
   return result;
 };
-
-export default questionsInit;
