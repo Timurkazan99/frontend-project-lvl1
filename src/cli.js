@@ -25,3 +25,5 @@ export const congratulations = (name = 'Player', win) => {
     console.log(`Congratulations, ${name}!`);
   }
 };
+
+export const rules = (rule) => console.log(rule);
