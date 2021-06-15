@@ -16,7 +16,7 @@ export const questionsInit = () => {
     result.push(temp);
   }
   return result;
-}
+};
 
 export const questions = questionsInit();
 export const rule = 'What is the result of the expression?';
