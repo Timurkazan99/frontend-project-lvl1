@@ -10,3 +10,7 @@
 ## Игра калькулятор:
 - [![asciicast](https://asciinema.org/a/mYpqQm43XvCxFM4ujMye3xBf5.svg)](https://asciinema.org/a/mYpqQm43XvCxFM4ujMye3xBf5)
 - [![asciicast](https://asciinema.org/a/gqKueW0lrNcbEWaZnaOpcpuGT.svg)](https://asciinema.org/a/gqKueW0lrNcbEWaZnaOpcpuGT)
+
+## Игра НОД:
+- [![asciicast](https://asciinema.org/a/DJ57wBB6srFf9kj3PiwPAEl8u.svg)](https://asciinema.org/a/DJ57wBB6srFf9kj3PiwPAEl8u)
+- [![asciicast](https://asciinema.org/a/2fqC3fXQqgEsUf3jGgohoS9VC.svg)](https://asciinema.org/a/2fqC3fXQqgEsUf3jGgohoS9VC)
