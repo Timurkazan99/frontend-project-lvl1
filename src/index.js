@@ -26,3 +26,4 @@ export const game = (questions, name, rule) => {
 };
 
 export const getRandomInt = (max) => floor(random() * max);
+export const getRandomArbitrary = (min, max) => floor(random() * (max - min + 1) + min);
