@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import {get_answer, correct, wrong, rules, congratulations} from './cli.js';
 import { random, floor } from 'mathjs';
 
