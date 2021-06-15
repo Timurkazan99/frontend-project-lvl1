@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
 import { greeting } from '../src/cli.js';
-import * as progression from '../games/brain-progression.js';
+import questionsInit from '../games/brain-progression.js';
 import { game } from '../src/index.js';
 
 const name = greeting();
-game(progression.questions, name, progression.rule);
+const questions = questionsInit();
+const rule = 'What number is missing in the progression?';
+game(questions, name, rule);

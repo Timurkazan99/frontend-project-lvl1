@@ -7,12 +7,6 @@ export const greeting = () => {
   return name;
 };
 
-export const chooseGame = (name, games) => {
-  console.log(`${name}, choose the game you want to play`);
-  const game = readlineSync.keyInSelect(games);
-  return game;
-};
-
 export const getAnswer = (question) => {
   console.log(`Question: ${question}`);
   const answer = readlineSync.question('Your answer: ');
@@ -31,9 +25,3 @@ export const congratulations = (name = 'Player', win) => {
     console.log(`Congratulations, ${name}!`);
   }
 };
-
-export const rules = (rule) => console.log(rule);
-
-export const error = () => console.error('Something going wrong, please try again.');
-
-export const goodbye = (name) => console.error(`Goodbye, see later ${name}`);

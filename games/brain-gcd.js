@@ -1,7 +1,7 @@
 import { gcd } from 'mathjs';
 import * as index from '../src/index.js';
 
-const questionsInit = () => {
+export default () => {
   const result = [];
   for (let i = 0; i < index.count; i += 1) {
     const temp = [];
@@ -14,6 +14,3 @@ const questionsInit = () => {
   }
   return result;
 };
-
-export const questions = questionsInit();
-export const rule = 'Find the greatest common divisor of given numbers.';

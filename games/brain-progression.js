@@ -27,5 +27,4 @@ const questionsInit = () => {
   return result;
 };
 
-export const questions = questionsInit();
-export const rule = 'What number is missing in the progression?';
+export default questionsInit;

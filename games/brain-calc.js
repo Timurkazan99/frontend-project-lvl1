@@ -1,7 +1,7 @@
 import { evaluate } from 'mathjs';
 import * as index from '../src/index.js';
 
-export const questionsInit = () => {
+export default () => {
   const result = [];
   const operations = ['+', '-', '*'];
   const quantity = operations.length;
@@ -17,6 +17,3 @@ export const questionsInit = () => {
   }
   return result;
 };
-
-export const questions = questionsInit();
-export const rule = 'What is the result of the expression?';
