@@ -1,5 +1,8 @@
 import * as index from '../src/index.js';
 
+export const questions = questions_init(index.count, index.max);
+export const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 const is_it_even = (number) => ((number % 2) === 0) ? 'yes' : 'no';
 
 const questions_init = (count, max) => {
@@ -10,10 +13,4 @@ const questions_init = (count, max) => {
     result.push(temp);
   }
   return result;
-};
-
-export const brain_even = (name) => {
-  const questions = questions_init(index.count, index.max);
-  const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-  index.game(questions, name, rule);
 };

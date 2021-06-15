@@ -1,6 +1,9 @@
 import { evaluate } from 'mathjs';
 import * as index from '../src/index.js';
 
+export const questions = questions_init(index.count, index.max);
+export const rule = 'What is the result of the expression?';
+
 export const questions_init = (count, max) => {
   const result = [];
   const operations = ['+', '-', '*'];
@@ -16,10 +19,4 @@ export const questions_init = (count, max) => {
     result.push(temp);
   }
   return result;
-};
-
-export const brain_calc = (name) => {
-  const questions = questions_init(index.count, index.max);
-  const rule = 'What is the result of the expression?';
-  index.game(questions, name, rule);
 };
