@@ -9,7 +9,9 @@ const even = (number) => (((number % 2) === 0) ? 'yes' : 'no');
 export const getRandomInt = (max) => floor(random() * max);
 export const getRandomArbitrary = (min, max) => floor(random() * (max - min + 1) + min);
 
-const checkAnswers = (questions, name = 'Player') => {
+export const game = (questions, name, rule) => {
+  console.log(rule);
+  let win = true;
   for (let i = 0; i < questions.length; i += 1) {
     const [question, correctAnswer] = questions[i];
     console.log(`Question: ${question}`);
@@ -19,15 +21,9 @@ const checkAnswers = (questions, name = 'Player') => {
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
-      return false;
+      win = false;
     }
   }
-  return true;
-};
-
-export const game = (questions, name, rule) => {
-  console.log(rule);
-  const win = checkAnswers(questions, name);
   if (win) {
     console.log(`Congratulations, ${name}!`);
   }
