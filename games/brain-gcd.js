@@ -1,12 +1,12 @@
-import * as index from '../src/index.js';
 import { gcd } from 'mathjs';
+import * as index from '../src/index.js';
 
-const questions_init = () => {
+const questionsInit = () => {
   const result = [];
   for (let i = 0; i < index.count; i += 1) {
     const temp = [];
-    const first = index.getRandomInt(index.max);
-    const second = index.getRandomInt(index.max);
+    const first = index.getRandomInt(index.maxValue);
+    const second = index.getRandomInt(index.maxValue);
     const answer = String(gcd(first, second));
     temp.push(`${first} ${second}`);
     temp.push(answer);
@@ -15,5 +15,5 @@ const questions_init = () => {
   return result;
 };
 
-export const questions = questions_init();
+export const questions = questionsInit();
 export const rule = 'Find the greatest common divisor of given numbers.';

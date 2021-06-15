@@ -7,30 +7,30 @@ export const greeting = () => {
   return name;
 };
 
-export const choose_games = (name, games) => {
-  console.log(`${name}, choose the game you want to play`)
+export const chooseGame = (name, games) => {
+  console.log(`${name}, choose the game you want to play`);
   const game = readlineSync.keyInSelect(games);
   return game;
-}
+};
 
-export const get_answer = (question) => {
+export const getAnswer = (question) => {
   console.log(`Question: ${question}`);
   const answer = readlineSync.question('Your answer: ');
   return answer;
-}
+};
 
 export const correct = () => console.log('Correct!');
 
-export const wrong = (name = 'Player', answer, correct_answer) => {
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct_answer}'.`);
+export const wrong = (name = 'Player', answer, correctAnswer) => {
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
   console.log(`Let's try again, ${name}!`);
-}
+};
 
 export const congratulations = (name = 'Player', win) => {
   if (win) {
     console.log(`Congratulations, ${name}!`);
   }
-}
+};
 
 export const rules = (rule) => console.log(rule);
 

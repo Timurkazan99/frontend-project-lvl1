@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-import { greeting, choose_games, error, goodbye } from '../src/cli.js';
+import {
+  greeting, chooseGame, error, goodbye,
+} from '../src/cli.js';
 import { game } from '../src/index.js';
 import * as calc from '../games/brain-calc.js';
 import * as even from '../games/brain-even.js';
@@ -9,8 +11,8 @@ import * as prime from '../games/brain-prime.js';
 
 const games = ['Even', 'Calculate', 'GCD', 'Progression', 'Prime'];
 const name = greeting();
-const game_index = choose_games(name, games);
-switch (game_index) {
+const gameIndex = chooseGame(name, games);
+switch (gameIndex) {
   case -1:
     goodbye(name);
     break;
@@ -30,7 +32,7 @@ switch (game_index) {
     game(prime.questions, name, prime.rule);
     break;
   default:
-    console.log(game_index);
+    console.log(gameIndex);
     error();
     break;
 }
