@@ -1,7 +1,5 @@
+import readlineSync from 'readline-sync';
 import { random, floor, isPrime } from 'mathjs';
-import {
-  getAnswer, correct, wrong, rules, congratulations,
-} from './cli.js';
 
 export const maxValue = 100; // Максимальное значение для загаданных чисел
 export const count = 3; // Необходимое количество правильных ответов для победы
@@ -11,14 +9,16 @@ const even = (number) => (((number % 2) === 0) ? 'yes' : 'no');
 export const getRandomInt = (max) => floor(random() * max);
 export const getRandomArbitrary = (min, max) => floor(random() * (max - min + 1) + min);
 
-export const checkAnswers = (questions, name = 'Player') => {
+const checkAnswers = (questions, name = 'Player') => {
   for (let i = 0; i < questions.length; i += 1) {
     const [question, correctAnswer] = questions[i];
-    const answer = getAnswer(question);
+    console.log(`Question: ${question}`);
+    const answer = readlineSync.question('Your answer: ');
     if (correctAnswer === answer) {
-      correct();
+      console.log('Correct!');
     } else {
-      wrong(name, answer, correctAnswer);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${name}!`);
       return false;
     }
   }
@@ -26,9 +26,11 @@ export const checkAnswers = (questions, name = 'Player') => {
 };
 
 export const game = (questions, name, rule) => {
-  rules(rule);
+  console.log(rule);
   const win = checkAnswers(questions, name);
-  congratulations(name, win);
+  if (win) {
+    console.log(`Congratulations, ${name}!`);
+  }
   return true;
 };
 
