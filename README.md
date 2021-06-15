@@ -14,3 +14,7 @@
 ## Игра НОД:
 - [![asciicast](https://asciinema.org/a/DJ57wBB6srFf9kj3PiwPAEl8u.svg)](https://asciinema.org/a/DJ57wBB6srFf9kj3PiwPAEl8u)
 - [![asciicast](https://asciinema.org/a/2fqC3fXQqgEsUf3jGgohoS9VC.svg)](https://asciinema.org/a/2fqC3fXQqgEsUf3jGgohoS9VC)
+
+## Игра арефметическая прогрессия:
+- [![asciicast](https://asciinema.org/a/ZrpFaDVnIVfLxOQlCoaQOJJ3T.svg)](https://asciinema.org/a/ZrpFaDVnIVfLxOQlCoaQOJJ3T)
+- [![asciicast](https://asciinema.org/a/639ozQVXlbQ9NIzdzkaqkumV1.svg)](https://asciinema.org/a/639ozQVXlbQ9NIzdzkaqkumV1)
