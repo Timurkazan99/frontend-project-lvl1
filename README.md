@@ -4,9 +4,9 @@
 [![Actions Status](https://github.com/Timurkazan99/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Timurkazan99/frontend-project-lvl1/actions/workflows/linter.yml)
 
 ## Игра на четность:
-- <a href="https://asciinema.org/a/gqKueW0lrNcbEWaZnaOpcpuGT" target="_blank"><img src="https://asciinema.org/a/gqKueW0lrNcbEWaZnaOpcpuGT.svg" /></a>
+- [![asciicast](https://asciinema.org/a/gqKueW0lrNcbEWaZnaOpcpuGT.svg)](https://asciinema.org/a/gqKueW0lrNcbEWaZnaOpcpuGT)
 - [![asciicast](https://asciinema.org/a/47LyHLuYWckpn7ndAizzA0IOE.svg)](https://asciinema.org/a/47LyHLuYWckpn7ndAizzA0IOE)
 
-Игра калькулятор:
+## Игра калькулятор:
 - [![asciicast](https://asciinema.org/a/mYpqQm43XvCxFM4ujMye3xBf5.svg)](https://asciinema.org/a/mYpqQm43XvCxFM4ujMye3xBf5)
 - [![asciicast](https://asciinema.org/a/gqKueW0lrNcbEWaZnaOpcpuGT.svg)](https://asciinema.org/a/gqKueW0lrNcbEWaZnaOpcpuGT)
