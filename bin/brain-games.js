@@ -5,8 +5,9 @@ import * as calc from '../games/brain-calc.js';
 import * as even from '../games/brain-even.js';
 import * as gcd from '../games/brain-gcd.js';
 import * as progression from '../games/brain-progression.js';
+import * as prime from '../games/brain-prime.js';
 
-const games = ['Even', 'Calculate', 'GCD', 'Progression'];
+const games = ['Even', 'Calculate', 'GCD', 'Progression', 'Prime'];
 const name = greeting();
 const game_index = choose_games(name, games);
 switch (game_index) {
@@ -24,6 +25,9 @@ switch (game_index) {
     break;
   case 3:
     game(progression.questions, name, progression.rule);
+    break;
+  case 4:
+    game(prime.questions, name, prime.rule);
     break;
   default:
     console.log(game_index);

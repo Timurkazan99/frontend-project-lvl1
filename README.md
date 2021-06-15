@@ -18,3 +18,7 @@
 ## Игра арефметическая прогрессия:
 - [![asciicast](https://asciinema.org/a/ZrpFaDVnIVfLxOQlCoaQOJJ3T.svg)](https://asciinema.org/a/ZrpFaDVnIVfLxOQlCoaQOJJ3T)
 - [![asciicast](https://asciinema.org/a/639ozQVXlbQ9NIzdzkaqkumV1.svg)](https://asciinema.org/a/639ozQVXlbQ9NIzdzkaqkumV1)
+
+## Игра простое число:
+- [![asciicast](https://asciinema.org/a/8Shk7RNuO0jMtVTq76j1fCgsv.svg)](https://asciinema.org/a/8Shk7RNuO0jMtVTq76j1fCgsv)
+- [![asciicast](https://asciinema.org/a/tL7myLr8DZKz27021V1wEfrXR.svg)](https://asciinema.org/a/tL7myLr8DZKz27021V1wEfrXR)
