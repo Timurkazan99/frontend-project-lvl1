@@ -1,4 +1,6 @@
-import { getAnswer, correct, wrong, rules, congratulations } from './cli.js';
+import {
+  getAnswer, correct, wrong, rules, congratulations,
+} from './cli.js';
 
 export const maxValue = 100; // Максимальное значение для загаданных чисел
 export const count = 3; // Необходимое количество правильных ответов для победы
@@ -23,7 +25,8 @@ const isPrime = (number) => {
 };
 
 const checkAnswers = (questions, name = 'Player') => {
-  for (const [question, correctAnswer] of questions) {
+  for (let i = 0; i < questions.length; i += 1) {
+    const [question, correctAnswer] = questions[i];
     const answer = getAnswer(question);
     if (correctAnswer === answer) {
       correct();
