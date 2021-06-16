@@ -1,41 +1,53 @@
-import {get_answer, correct, wrong, rules, congratulations} from './cli.js';
-import { random, floor, isPrime } from 'mathjs';
+import { getAnswer, correct, wrong, rules, congratulations } from './cli.js';
 
-export const max = 100; // Максимальное значение для загаданных чисел
+export const maxValue = 100; // Максимальное значение для загаданных чисел
 export const count = 3; // Необходимое количество правильных ответов для победы
 
-const is_prime = (number) => isPrime(number) ? 'yes' : 'no';
-const is_it_even = (number) => ((number % 2) === 0) ? 'yes' : 'no';
-export const getRandomInt = (max) => floor(random() * max);
-export const getRandomArbitrary = (min, max) => floor(random() * (max - min + 1) + min);
+const isEven = (number) => (((number % 2) === 0) ? 'yes' : 'no');
+export const getRandomInt = (max) => Math.floor(Math.random() * max);
+export const getRandomArbitrary = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
-export const check_answers = (questions, name = 'Player') => {
-  for(const [question, correct_answer] of questions) {
-    const answer = get_answer(question);
-    if (correct_answer === answer) {
+const isPrime = (number) => {
+  const primes = [ // Простые числа до 100
+    2, 3, 5, 7, 11,
+    13, 17, 19, 23,
+    29, 31, 37, 41,
+    43, 47, 53, 59,
+    61, 67, 71, 73,
+    79, 83, 89, 97];
+
+  if (primes.includes(number)) {
+    return 'yes';
+  }
+  return 'no';
+};
+
+const checkAnswers = (questions, name = 'Player') => {
+  for (const [question, correctAnswer] of questions) {
+    const answer = getAnswer(question);
+    if (correctAnswer === answer) {
       correct();
     } else {
-      wrong(name, answer, correct_answer);
+      wrong(name, answer, correctAnswer);
       return false;
-      break;
     }
   }
   return true;
 };
 
 export const game = (questions, name, rule) => {
-    rules(rule);
-    const win = check_answers(questions, name);
-    congratulations(name, win);
-    return true;
+  rules(rule);
+  const win = checkAnswers(questions, name);
+  congratulations(name, win);
+  return true;
 };
 
-export const questions_init = (game) => {
+export const questionsInit = (gameName) => {
   const result = [];
   for (let i = 0; i < count; i += 1) {
-    const temp = [getRandomInt(max)];
-    if (game === 'even') temp.push(is_it_even(temp[0]));
-    if (game === 'prime') temp.push(is_prime(temp[0]));
+    const temp = [getRandomInt(maxValue)];
+    if (gameName === 'even') temp.push(isEven(temp[0]));
+    if (gameName === 'prime') temp.push(isPrime(temp[0]));
     result.push(temp);
   }
   return result;
